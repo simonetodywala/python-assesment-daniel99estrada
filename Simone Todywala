@@ -1,0 +1,36 @@
+print("Sign up: \n")
+correctUser = input("Username: ")
+correctPassword = input("Password: ")
+
+print("\nSign in: \n")
+
+user_Username = " "
+while user_Username != correctUser:
+    user_Username = input("Username: ")
+    if user_Username != correctUser:
+        print("Try again!")
+    print("")
+user_password = " "
+while user_password != correctPassword:
+    user_password = input("Password: ")
+    if user_password != correctPassword:
+        print("Try again!")
+    print("")
+    
+print("------------------")
+print("  Welcome " + correctUser)
+print("------------------")
+
+def gameMenu():
+    print("")
+    isMultiplayer = input("Multiplayer? ")
+
+    if isMultiplayer == "yes":
+        user2 = input("\nWelcome player2, what is your user? ")
+        print("\n------------------")
+        print("  Welcome " + user2)
+        print("------------------")
+    else:
+        print("Look who's flying solo.")
+        
+gameMenu()
